@@ -1,5 +1,6 @@
 package BoraTech;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.github.javafaker.Faker;
@@ -16,22 +17,27 @@ public class GenerateFakeData {
 //		Date from = new Date(2017, 1, 1, 0, 0);
 //		Date to = new Date(2018, 12, 31, 0, 0);
 //		Date orderDate = faker.date().between(from, to);
+//		
+//		Faker faker = new Faker();
+//		
+//		int id = 1;
+//		
+//		for (int i = 0; i < 10; i++) {
+//			String firstName = faker.name().firstName();
+//			String lastName = faker.name().lastName();
+//			String phoneNumber = faker.phoneNumber().cellPhone();
+//			String email = firstName + "." + lastName + "@gmail.com";
+//			System.out.println(id + " " + firstName + "\t" + lastName + "\t" + email + "\t" + phoneNumber);
+//			id++;
+//		}
 		
-		Faker faker = new Faker();
+		Date myDate = new Date();
 		
-		int id = 1;
+		System.out.println(myDate);
 		
-		for (int i = 0; i < 10; i++) {
-			String firstName = faker.name().firstName();
-			String lastName = faker.name().lastName();
-			String phoneNumber = faker.phoneNumber().cellPhone();
-			String email = firstName + "." + lastName + "@gmail.com";
-			System.out.println(id + " " + firstName + "\t" + lastName + "\t" + email + "\t" + phoneNumber);
-			id++;
-		}
+		String timeStamp = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(myDate);
 		
-		
-		
+		System.out.println(timeStamp);
 	}
 
 }
